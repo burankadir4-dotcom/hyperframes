@@ -1,6 +1,6 @@
 # REVIEW · Usturlap Reels · 16 Kasım
 
-Render: `renders/usturlap-ay-burcu-16kasim-seslendirmeli.mp4` (1080×1920, 30 fps, 32 s).
+Render: `renders/usturlap-ay-burcu-16kasim-altyazili.mp4` (1080×1920, 30 fps, 32 s).
 
 ## Voiceover (added)
 
@@ -34,3 +34,10 @@ Render: `renders/usturlap-ay-burcu-16kasim-seslendirmeli.mp4` (1080×1920, 30 fp
 
 - `timeline_track_too_dense`: one scene on purpose (a continuous take); the text lines share lanes 2–4.
 - `rotation_pivot_drift`: the needle and triangle rotate about the dial centre (svgOrigin), not their own box centre. Intended.
+
+## Captions and re-edit (added)
+
+- Word timestamps from ElevenLabs Scribe (`assets/transcript.json`, spelling matched to the script). Captions live in `compositions/captions.html` on the captions track: one rail line under the dial (top 1190 px, inside the Reels safe band), 18 groups of 1–4 words, the spoken word turns gold. The closing question is not captioned: it is on screen verbatim.
+- Dial shrunk to r 320 (centre y 860) so the caption line sits under it without covering sign names.
+- Every beat now lands on its word: "seni" 3.3 s, "rahatlatır" 4.4 s, "Ay burcunda" 7.0 s, "Çünkü" 8.36 s, needle stops on "ateş" 11.68 / "Toprak" 15.66 / "Hava" 19.42 / "Su" 22.4 s, "hangisi" 27.28 s, "Yorumlara" 28.08 s.
+- New: during "duygusal ihtiyaçlarını anlatır" the needle sweeps the whole dial (9.2–11.68 s) and lands on Koç, replacing a 3.7 s still stretch.

@@ -1,0 +1,332 @@
+[
+  {
+    "id": "w0",
+    "text": "Uzun",
+    "start": 0.5,
+    "end": 0.8
+  },
+  {
+    "id": "w1",
+    "text": "bir",
+    "start": 0.86,
+    "end": 0.94
+  },
+  {
+    "id": "w2",
+    "text": "günün",
+    "start": 1.0,
+    "end": 1.24
+  },
+  {
+    "id": "w3",
+    "text": "sonundasın...",
+    "start": 1.3,
+    "end": 1.88
+  },
+  {
+    "id": "w4",
+    "text": "Peki",
+    "start": 2.64,
+    "end": 2.96
+  },
+  {
+    "id": "w5",
+    "text": "seni",
+    "start": 3.3,
+    "end": 3.52
+  },
+  {
+    "id": "w6",
+    "text": "gerçekten",
+    "start": 3.58,
+    "end": 4.2
+  },
+  {
+    "id": "w7",
+    "text": "ne",
+    "start": 4.24,
+    "end": 4.34
+  },
+  {
+    "id": "w8",
+    "text": "rahatlatır?",
+    "start": 4.4,
+    "end": 4.98
+  },
+  {
+    "id": "w9",
+    "text": "Cevabın",
+    "start": 5.74,
+    "end": 6.2
+  },
+  {
+    "id": "w10",
+    "text": "bir",
+    "start": 6.24,
+    "end": 6.32
+  },
+  {
+    "id": "w11",
+    "text": "kısmı,",
+    "start": 6.4,
+    "end": 6.82
+  },
+  {
+    "id": "w12",
+    "text": "Ay",
+    "start": 7.04,
+    "end": 7.16
+  },
+  {
+    "id": "w13",
+    "text": "burcunda",
+    "start": 7.22,
+    "end": 7.62
+  },
+  {
+    "id": "w14",
+    "text": "saklı.",
+    "start": 7.66,
+    "end": 8.0
+  },
+  {
+    "id": "w15",
+    "text": "Çünkü",
+    "start": 8.36,
+    "end": 8.68
+  },
+  {
+    "id": "w16",
+    "text": "Ay,",
+    "start": 8.78,
+    "end": 8.94
+  },
+  {
+    "id": "w17",
+    "text": "duygusal",
+    "start": 9.12,
+    "end": 9.52
+  },
+  {
+    "id": "w18",
+    "text": "ihtiyaçlarını",
+    "start": 9.58,
+    "end": 10.2
+  },
+  {
+    "id": "w19",
+    "text": "anlatır.",
+    "start": 10.26,
+    "end": 10.7
+  },
+  {
+    "id": "w20",
+    "text": "Ay'ın",
+    "start": 11.22,
+    "end": 11.46
+  },
+  {
+    "id": "w21",
+    "text": "bir",
+    "start": 11.48,
+    "end": 11.62
+  },
+  {
+    "id": "w22",
+    "text": "ateş",
+    "start": 11.68,
+    "end": 11.92
+  },
+  {
+    "id": "w23",
+    "text": "burcundaysa,",
+    "start": 12.0,
+    "end": 12.74
+  },
+  {
+    "id": "w24",
+    "text": "enerjini",
+    "start": 13.0,
+    "end": 13.46
+  },
+  {
+    "id": "w25",
+    "text": "harekete",
+    "start": 13.48,
+    "end": 13.88
+  },
+  {
+    "id": "w26",
+    "text": "dökmek",
+    "start": 13.92,
+    "end": 14.26
+  },
+  {
+    "id": "w27",
+    "text": "sana",
+    "start": 14.34,
+    "end": 14.54
+  },
+  {
+    "id": "w28",
+    "text": "iyi",
+    "start": 14.6,
+    "end": 14.7
+  },
+  {
+    "id": "w29",
+    "text": "gelebilir.",
+    "start": 14.76,
+    "end": 15.24
+  },
+  {
+    "id": "w30",
+    "text": "Toprak",
+    "start": 15.66,
+    "end": 16.0
+  },
+  {
+    "id": "w31",
+    "text": "burcundaysa,",
+    "start": 16.06,
+    "end": 16.78
+  },
+  {
+    "id": "w32",
+    "text": "dokunabildiğin,",
+    "start": 17.04,
+    "end": 17.82
+  },
+  {
+    "id": "w33",
+    "text": "somut",
+    "start": 18.1,
+    "end": 18.36
+  },
+  {
+    "id": "w34",
+    "text": "bir",
+    "start": 18.44,
+    "end": 18.54
+  },
+  {
+    "id": "w35",
+    "text": "rahatlık.",
+    "start": 18.56,
+    "end": 19.04
+  },
+  {
+    "id": "w36",
+    "text": "Hava",
+    "start": 19.42,
+    "end": 19.6
+  },
+  {
+    "id": "w37",
+    "text": "burcundaysa,",
+    "start": 19.66,
+    "end": 20.42
+  },
+  {
+    "id": "w38",
+    "text": "içini",
+    "start": 20.7,
+    "end": 21.0
+  },
+  {
+    "id": "w39",
+    "text": "birine",
+    "start": 21.04,
+    "end": 21.34
+  },
+  {
+    "id": "w40",
+    "text": "anlatmak.",
+    "start": 21.38,
+    "end": 21.96
+  },
+  {
+    "id": "w41",
+    "text": "Su",
+    "start": 22.4,
+    "end": 22.5
+  },
+  {
+    "id": "w42",
+    "text": "burcundaysa,",
+    "start": 22.56,
+    "end": 23.34
+  },
+  {
+    "id": "w43",
+    "text": "duygularına",
+    "start": 23.58,
+    "end": 24.2
+  },
+  {
+    "id": "w44",
+    "text": "sessiz",
+    "start": 24.28,
+    "end": 24.7
+  },
+  {
+    "id": "w45",
+    "text": "bir",
+    "start": 24.74,
+    "end": 24.86
+  },
+  {
+    "id": "w46",
+    "text": "alan",
+    "start": 24.92,
+    "end": 25.1
+  },
+  {
+    "id": "w47",
+    "text": "açmak.",
+    "start": 25.16,
+    "end": 25.56
+  },
+  {
+    "id": "w48",
+    "text": "Peki",
+    "start": 25.98,
+    "end": 26.3
+  },
+  {
+    "id": "w49",
+    "text": "senin",
+    "start": 26.54,
+    "end": 26.78
+  },
+  {
+    "id": "w50",
+    "text": "Ay",
+    "start": 26.86,
+    "end": 26.94
+  },
+  {
+    "id": "w51",
+    "text": "burcun",
+    "start": 27.0,
+    "end": 27.26
+  },
+  {
+    "id": "w52",
+    "text": "hangisi?",
+    "start": 27.28,
+    "end": 27.72
+  },
+  {
+    "id": "w53",
+    "text": "Yorumlara",
+    "start": 28.08,
+    "end": 28.48
+  },
+  {
+    "id": "w54",
+    "text": "yaz.",
+    "start": 28.52,
+    "end": 28.76
+  }
+]
