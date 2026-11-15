@@ -1,6 +1,14 @@
 # REVIEW · Usturlap Reels · 16 Kasım
 
-Render: `renders/usturlap-ay-burcu-16kasim.mp4` (1080×1920, 30 fps, 29 s).
+Render: `renders/usturlap-ay-burcu-16kasim-seslendirmeli.mp4` (1080×1920, 30 fps, 32 s).
+
+## Voiceover (added)
+
+- ElevenLabs, voice "Serkan Yılmaz", model eleven_v4, one take (the second take failed to start: server busy). Loudness-normalised to −16 LUFS, placed at 0.3 s.
+- Script: "Uzun bir günün sonundasın... Peki seni gerçekten ne rahatlatır? Cevabın bir kısmı, Ay burcunda saklı. Çünkü Ay, duygusal ihtiyaçlarını anlatır. Ay'ın bir ateş burcundaysa, enerjini harekete dökmek sana iyi gelebilir. Toprak burcundaysa, dokunabildiğin, somut bir rahatlık. Hava burcundaysa, içini birine anlatmak. Su burcundaysa, duygularına sessiz bir alan açmak. Peki senin Ay burcun hangisi? Yorumlara yaz."
+- Beats re-timed to the phrase boundaries measured from the voice's silences (word-level transcription unavailable: the model host is blocked). Element needle stops: 11.7 / 16.2 / 20.0 / 23.05 s.
+- Accent words ("rahatlatır?", "hangisi?") arrive grey with their line and turn gold on the spoken word.
+- Final mix: −13.9 LUFS integrated (voice re-encoded 96 kbps mono to stay under the repo’s 500 KB limit), true peak −1.0 dBTP, no clipping. Measured, not heard.
 
 ## Creative calls
 
