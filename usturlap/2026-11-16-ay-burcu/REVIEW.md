@@ -1,6 +1,6 @@
 # REVIEW · Usturlap Reels · 16 Kasım
 
-Render: `renders/usturlap-ay-burcu-16kasim-altyazili.mp4` (1080×1920, 30 fps, 32 s).
+Render: `renders/usturlap-ay-burcu-16kasim.mp4` (1080×1920, 30 fps, 32 s).
 
 ## Voiceover (added)
 
@@ -41,3 +41,10 @@ Render: `renders/usturlap-ay-burcu-16kasim-altyazili.mp4` (1080×1920, 30 fps, 3
 - Dial shrunk to r 320 (centre y 860) so the caption line sits under it without covering sign names.
 - Every beat now lands on its word: "seni" 3.3 s, "rahatlatır" 4.4 s, "Ay burcunda" 7.0 s, "Çünkü" 8.36 s, needle stops on "ateş" 11.68 / "Toprak" 15.66 / "Hava" 19.42 / "Su" 22.4 s, "hangisi" 27.28 s, "Yorumlara" 28.08 s.
 - New: during "duygusal ihtiyaçlarını anlatır" the needle sweeps the whole dial (9.2–11.68 s) and lands on Koç, replacing a 3.7 s still stretch.
+
+## Fuller frame (added)
+
+- After the push the sky stays navy (#121A33) instead of flooding to black; a night layer (sky, sparse stars, skyline) takes over from the scaled window at 5.3 s and the skyline rises back under the dial (5.9–7.0 s, expo.out) and holds to the end.
+- The dial gets a dark face (#0B0D12), so it reads as an instrument against the navy sky.
+- Each needle stop lights three skyline windows (12 in all), so the bottom of the frame keeps changing; the skyline sits under Instagram's own UI and carries no text.
+- Text sizes: captions 58 px, sub-lines 48 px, labels 34 px.
