@@ -11,9 +11,9 @@ Body: Poppins 300/500 (self-hosted, "Usturlap Sans"), 40 px body; labels 30 px, 
 The medium is the brand's line drawing: every structure is a 2 px gold hairline (non-scaling), no fills except the moon crescent and the skyline.
 No grain, no vignette, no shadow, no glow.
 OBJECTS: An arched window (double hairline, sill), a skyline silhouette with a few lit windows, the moon drawn exactly as the logo emblem (ring + crescent),
-the astrolabe dial: two outer rings, 12 sector lines, 12 Turkish sign names, inner ring, alidade (needle), centre pin,
+the astrolabe dial: outer ring + notch ring, 12 sector lines, 12 Turkish sign names, inner ring, alidade (needle), centre pin,
 the element triangle (trigon) joining the three signs of one element.
-MOTION: Camera push: power3.inOut, 3.6 s, one tween, scale 1 → 3.077 about the moon centre.
+MOTION: Camera push: power3.inOut, 3.6 s, one tween, scale 1 → 2.769 about the moon centre (moon r 130 → dial r 360).
 Needle + trigon: rotate together +150° per element, power2.inOut 0.8 s, always clockwise.
 Text in: whole-line blur 8 → 0 px + opacity, 0.18 s, expo.out; sub-lines grey → ink 0.3 s, no translate.
 Text out: blur 0 → 8 px + opacity → 0, 0.2 s, power2.in. Titles never move after they land.
