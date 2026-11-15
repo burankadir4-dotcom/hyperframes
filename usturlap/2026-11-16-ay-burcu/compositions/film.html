@@ -1,0 +1,149 @@
+<template>
+  <style>
+    @font-face { font-family: "Usturlap Serif"; font-weight: 500; src: url("assets/fonts/lora-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "Usturlap Serif"; font-weight: 500; src: url("assets/fonts/lora-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "Usturlap Sans"; font-weight: 300; src: url("assets/fonts/poppins-300-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "Usturlap Sans"; font-weight: 300; src: url("assets/fonts/poppins-300-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "Usturlap Sans"; font-weight: 500; src: url("assets/fonts/poppins-500-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "Usturlap Sans"; font-weight: 500; src: url("assets/fonts/poppins-500-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: var(--night, #0B0D12); color: var(--ivory, #F2EDE3); font-family: "Usturlap Sans", sans-serif; }
+    #world, #dial { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #world svg, #dial svg { display: block; }
+    .sign { font-family: "Usturlap Sans", sans-serif; font-weight: 500; font-size: 28px; letter-spacing: 0.08em; }
+    .slot { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; pointer-events: none; }
+    .line { position: absolute; left: 90px; width: 900px; text-align: center; }
+    .in { display: inline-block; }
+    .eyebrow { top: 280px; font-weight: 500; font-size: 32px; letter-spacing: 0.18em; color: #C9A75C; }
+    .lab { top: 280px; font-weight: 500; font-size: 30px; letter-spacing: 0.16em; color: #C9A75C; }
+    .head, .hook { font-family: "Usturlap Serif", serif; font-weight: 500; color: #F2EDE3; line-height: 1.12; }
+    .head { top: 324px; font-size: 88px; }
+    .hook { font-size: 76px; }
+    .gold { color: #E8D3A0; }
+    .sub { top: 438px; font-weight: 300; font-size: 40px; color: #F2EDE3; }
+    #wordmark { position: absolute; left: 90px; width: 900px; top: 1010px; text-align: center; font-family: "Usturlap Serif", serif; font-weight: 500; font-size: 64px; letter-spacing: 0.22em; color: #E8D3A0; }
+    #handle { top: 1100px; font-weight: 300; font-size: 34px; letter-spacing: 0.06em; color: #F2EDE3; }
+  </style>
+  <div id="root" data-composition-id="film" data-width="1080" data-height="1920" data-composition-variables='[{"id": "clock", "type": "string", "label": "Saat", "default": "23:47"}, {"id": "hook1", "type": "string", "label": "Açılış 1", "default": "Zor bir günün sonunda"}, {"id": "hook2", "type": "string", "label": "Açılış 2", "default": "seni ne"}, {"id": "hook3", "type": "string", "label": "Açılış vurgu", "default": "rahatlatır?"}, {"id": "lesson1", "type": "string", "label": "Ders 1", "default": "Ay burcun, sana neyin"}, {"id": "lesson2", "type": "string", "label": "Ders 2", "default": "iyi geldiğini anlatır"}, {"id": "atesLabel", "type": "string", "label": "ates etiket", "default": "ATEŞ AY · KOÇ, ASLAN, YAY"}, {"id": "atesHead", "type": "string", "label": "ates başlık", "default": "Hareket etmek"}, {"id": "atesSub", "type": "string", "label": "ates alt satır", "default": "Bir yürüyüş, yeni bir plan"}, {"id": "toprakLabel", "type": "string", "label": "toprak etiket", "default": "TOPRAK AY · BOĞA, BAŞAK, OĞLAK"}, {"id": "toprakHead", "type": "string", "label": "toprak başlık", "default": "Somut bir konfor"}, {"id": "toprakSub", "type": "string", "label": "toprak alt satır", "default": "Sıcak bir yemek, düzenli bir oda"}, {"id": "havaLabel", "type": "string", "label": "hava etiket", "default": "HAVA AY · İKİZLER, TERAZİ, KOVA"}, {"id": "havaHead", "type": "string", "label": "hava başlık", "default": "Konuşmak"}, {"id": "havaSub", "type": "string", "label": "hava alt satır", "default": "Bir sohbet, yeni bir fikir"}, {"id": "suLabel", "type": "string", "label": "su etiket", "default": "SU AY · YENGEÇ, AKREP, BALIK"}, {"id": "suHead", "type": "string", "label": "su başlık", "default": "Duyguya alan açmak"}, {"id": "suSub", "type": "string", "label": "su alt satır", "default": "Sessizlik, müzik, sevdiğin biri"}, {"id": "cta1", "type": "string", "label": "Kapanış soru", "default": "Senin Ay burcun"}, {"id": "cta2", "type": "string", "label": "Kapanış vurgu", "default": "hangisi?"}, {"id": "cta3", "type": "string", "label": "Kapanış çağrı", "default": "Yorumlara yaz"}, {"id": "handle", "type": "string", "label": "Hesap", "default": "@usturlap.astro"}]'>
+    <div id="world" class="clip" data-start="0" data-duration="4.9" data-track-index="0">
+<svg id="world-svg" viewBox="0 0 1080 1920" width="1080" height="1920" aria-hidden="true">
+  <rect x="0" y="0" width="1080" height="1920" fill="#0B0D12"/>
+  <path id="sky" d="M170 1480V960A370 370 0 0 1 910 960V1480Z" fill="#121A33"/>
+  <g id="stars"><circle cx="240" cy="700" r="2.2" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="330" cy="610" r="1.6" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="800" cy="690" r="2" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="870" cy="820" r="1.5" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="220" cy="940" r="1.7" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="760" cy="560" r="1.4" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="420" cy="1010" r="1.3" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="690" cy="1060" r="1.8" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="300" cy="1140" r="1.4" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="860" cy="1110" r="1.6" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="610" cy="640" r="1.2" fill="#F2EDE3" fill-opacity="0.55"/><circle cx="470" cy="590" r="1.5" fill="#F2EDE3" fill-opacity="0.55"/></g>
+  <g id="moon">
+    <circle cx="540" cy="890" r="130" fill="none" stroke="#C9A75C" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    <path id="moon-cres" d="M29 20a12 12 0 1 0 13 17 9.5 9.5 0 1 1-13-17z" transform="translate(540 890) scale(5.9091) translate(-32 -32)" fill="#C9A75C" />
+  </g>
+  <g id="city"><rect x="170" y="1290" width="90" height="190" fill="#0B0D12"/><rect x="260" y="1340" width="70" height="140" fill="#0B0D12"/><rect x="330" y="1250" width="110" height="230" fill="#0B0D12"/><rect x="440" y="1320" width="60" height="160" fill="#0B0D12"/><rect x="500" y="1230" width="120" height="250" fill="#0B0D12"/><rect x="620" y="1300" width="80" height="180" fill="#0B0D12"/><rect x="700" y="1270" width="100" height="210" fill="#0B0D12"/><rect x="800" y="1330" width="110" height="150" fill="#0B0D12"/><path d="M170 1480V1290H260V1480" fill="none" stroke="#C9A75C" stroke-opacity="0.35" stroke-width="1.2" vector-effect="non-scaling-stroke"/><path d="M260 1480V1340H330V1480" fill="none" stroke="#C9A75C" stroke-opacity="0.35" stroke-width="1.2" vector-effect="non-scaling-stroke"/><path d="M330 1480V1250H440V1480" fill="none" stroke="#C9A75C" stroke-opacity="0.35" stroke-width="1.2" vector-effect="non-scaling-stroke"/><path d="M440 1480V1320H500V1480" fill="none" stroke="#C9A75C" stroke-opacity="0.35" stroke-width="1.2" vector-effect="non-scaling-stroke"/><path d="M500 1480V1230H620V1480" fill="none" stroke="#C9A75C" stroke-opacity="0.35" stroke-width="1.2" vector-effect="non-scaling-stroke"/><path d="M620 1480V1300H700V1480" fill="none" stroke="#C9A75C" stroke-opacity="0.35" stroke-width="1.2" vector-effect="non-scaling-stroke"/><path d="M700 1480V1270H800V1480" fill="none" stroke="#C9A75C" stroke-opacity="0.35" stroke-width="1.2" vector-effect="non-scaling-stroke"/><path d="M800 1480V1330H910V1480" fill="none" stroke="#C9A75C" stroke-opacity="0.35" stroke-width="1.2" vector-effect="non-scaling-stroke"/><rect id="lw0" x="190" y="1320" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw1" x="225" y="1360" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw2" x="355" y="1280" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw3" x="395" y="1330" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw4" x="525" y="1260" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw5" x="575" y="1300" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw6" x="640" y="1340" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw7" x="730" y="1300" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw8" x="765" y="1350" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw9" x="830" y="1370" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw10" x="860" y="1400" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/><rect id="lw11" x="545" y="1400" width="14" height="20" fill="#E8D3A0" fill-opacity="0.85"/>
+  <path d="M170 1480V960A370 370 0 0 1 910 960V1480" fill="none" stroke="#C9A75C" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <path d="M150 1480V960A390 390 0 0 1 930 960V1480" fill="none" stroke="#C9A75C" stroke-width="1.2" stroke-opacity="0.6" vector-effect="non-scaling-stroke"/>
+  <path d="M110 1480H970M130 1508H950" fill="none" stroke="#C9A75C" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  </g>
+</svg></div>
+    <div id="dial" class="clip" data-start="4.8" data-duration="24.2" data-track-index="1">
+<svg id="dial-svg" viewBox="0 0 1080 1920" width="1080" height="1920" aria-hidden="true">
+  <circle id="d-ring" cx="540" cy="890" r="360" fill="none" stroke="#C9A75C" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <g id="d-detail">
+    <circle cx="540" cy="890" r="345" fill="none" stroke="#C9A75C" stroke-width="1.2" stroke-opacity="0.45" vector-effect="non-scaling-stroke"/>
+    <circle cx="540" cy="890" r="265" fill="none" stroke="#C9A75C" stroke-width="1.2" stroke-opacity="0.45" vector-effect="non-scaling-stroke"/>
+    <line class="sect" x1="471.4" y1="634.0" x2="450.7" y2="556.8" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="608.6" y1="634.0" x2="629.3" y2="556.8" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="727.4" y1="702.6" x2="784.0" y2="646.0" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="796.0" y1="821.4" x2="873.2" y2="800.7" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="796.0" y1="958.6" x2="873.2" y2="979.3" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="727.4" y1="1077.4" x2="784.0" y2="1134.0" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="608.6" y1="1146.0" x2="629.3" y2="1223.2" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="471.4" y1="1146.0" x2="450.7" y2="1223.2" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="352.6" y1="1077.4" x2="296.0" y2="1134.0" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="284.0" y1="958.6" x2="206.8" y2="979.3" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="284.0" y1="821.4" x2="206.8" y2="800.7" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/><line class="sect" x1="352.6" y1="702.6" x2="296.0" y2="646.0" stroke="#C9A75C" stroke-opacity="0.45" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+    <g id="d-names"><text id="sg0" class="sign" fill="#8B92A8" x="540.0" y="585.0" transform="rotate(0.0 540.0 585.0)" text-anchor="middle" dominant-baseline="central">KOÇ</text><text id="sg1" class="sign" fill="#8B92A8" x="692.5" y="625.9" transform="rotate(30.0 692.5 625.9)" text-anchor="middle" dominant-baseline="central">BOĞA</text><text id="sg2" class="sign" fill="#8B92A8" x="804.1" y="737.5" transform="rotate(60.0 804.1 737.5)" text-anchor="middle" dominant-baseline="central">İKİZLER</text><text id="sg3" class="sign" fill="#8B92A8" x="845.0" y="890.0" transform="rotate(90.0 845.0 890.0)" text-anchor="middle" dominant-baseline="central">YENGEÇ</text><text id="sg4" class="sign" fill="#8B92A8" x="804.1" y="1042.5" transform="rotate(-60.0 804.1 1042.5)" text-anchor="middle" dominant-baseline="central">ASLAN</text><text id="sg5" class="sign" fill="#8B92A8" x="692.5" y="1154.1" transform="rotate(-30.0 692.5 1154.1)" text-anchor="middle" dominant-baseline="central">BAŞAK</text><text id="sg6" class="sign" fill="#8B92A8" x="540.0" y="1195.0" transform="rotate(0.0 540.0 1195.0)" text-anchor="middle" dominant-baseline="central">TERAZİ</text><text id="sg7" class="sign" fill="#8B92A8" x="387.5" y="1154.1" transform="rotate(30.0 387.5 1154.1)" text-anchor="middle" dominant-baseline="central">AKREP</text><text id="sg8" class="sign" fill="#8B92A8" x="275.9" y="1042.5" transform="rotate(60.0 275.9 1042.5)" text-anchor="middle" dominant-baseline="central">YAY</text><text id="sg9" class="sign" fill="#8B92A8" x="235.0" y="890.0" transform="rotate(270.0 235.0 890.0)" text-anchor="middle" dominant-baseline="central">OĞLAK</text><text id="sg10" class="sign" fill="#8B92A8" x="275.9" y="737.5" transform="rotate(300.0 275.9 737.5)" text-anchor="middle" dominant-baseline="central">KOVA</text><text id="sg11" class="sign" fill="#8B92A8" x="387.5" y="625.9" transform="rotate(330.0 387.5 625.9)" text-anchor="middle" dominant-baseline="central">BALIK</text></g>
+  </g>
+  <polygon id="trigon" points="540.0,625.0 769.5,1022.5 310.5,1022.5" fill="none" stroke="#E8D3A0" stroke-width="2" stroke-dasharray="1377.0" stroke-dashoffset="1377.0" vector-effect="non-scaling-stroke"/>
+  <path id="d-cres" opacity="0" d="M29 20a12 12 0 1 0 13 17 9.5 9.5 0 1 1-13-17z" transform="translate(540 890) scale(16.3636) translate(-32 -32)" fill="#C9A75C" />
+  <g id="needle">
+    <line x1="540" y1="1145" x2="540" y2="635" stroke="#C9A75C" stroke-width="2.4" vector-effect="non-scaling-stroke"/>
+    <path d="M540 607L528 637H552Z" fill="#C9A75C"/>
+  </g>
+  <circle id="d-pin" cx="540" cy="890" r="9" fill="#0B0D12" stroke="#C9A75C" stroke-width="2" vector-effect="non-scaling-stroke"/>
+</svg></div>
+
+    <div class="slot">
+      <div id="clock" class="clip line eyebrow" data-start="0.00" data-duration="3.30" data-track-index="3" data-layout-allow-overlap><span id="clock-in" class="in" data-var-text="clock">23:47</span></div>
+      <div id="hook-a" class="clip line hook" data-start="0.00" data-duration="3.30" data-track-index="3" data-layout-allow-overlap style="top:330px"><span id="hook-a-in" class="in" data-var-text="hook1">Zor bir günün sonunda</span></div>
+      <div id="hook-b" class="clip line hook" data-start="0" data-duration="3.3" data-track-index="3" data-layout-allow-overlap style="top:416px"><span id="hook-b-in" class="in" data-var-text="hook2">seni ne</span> <span id="hook-c-in" class="in gold" data-var-text="hook3">rahatlatır?</span></div>
+    </div>
+
+    <div class="slot">
+      <div id="lesson-a" class="clip line hook" data-start="5.00" data-duration="2.80" data-track-index="3" data-layout-allow-overlap style="top:300px"><span id="lesson-a-in" class="in" data-var-text="lesson1">Ay burcun, sana neyin</span></div>
+      <div id="lesson-b" class="clip line hook" data-start="5.00" data-duration="2.80" data-track-index="3" data-layout-allow-overlap style="top:386px"><span id="lesson-b-in" class="in" data-var-text="lesson2">iyi geldiğini anlatır</span></div>
+    </div>
+
+    <div class="slot"><div id="ates-lab" class="clip line lab" data-start="8.40" data-duration="3.20" data-track-index="2" data-layout-allow-overlap><span id="ates-lab-in" class="in" data-var-text="atesLabel">ATEŞ AY · KOÇ, ASLAN, YAY</span></div><div id="ates-head" class="clip line head" data-start="8.40" data-duration="3.20" data-track-index="3" data-layout-allow-overlap><span id="ates-head-in" class="in" data-var-text="atesHead">Hareket etmek</span></div><div id="ates-sub" class="clip line sub" data-start="8.40" data-duration="3.20" data-track-index="4" data-layout-allow-overlap><span id="ates-sub-in" class="in" data-var-text="atesSub">Bir yürüyüş, yeni bir plan</span></div></div><div class="slot"><div id="toprak-lab" class="clip line lab" data-start="12.40" data-duration="3.20" data-track-index="2" data-layout-allow-overlap><span id="toprak-lab-in" class="in" data-var-text="toprakLabel">TOPRAK AY · BOĞA, BAŞAK, OĞLAK</span></div><div id="toprak-head" class="clip line head" data-start="12.40" data-duration="3.20" data-track-index="3" data-layout-allow-overlap><span id="toprak-head-in" class="in" data-var-text="toprakHead">Somut bir konfor</span></div><div id="toprak-sub" class="clip line sub" data-start="12.40" data-duration="3.20" data-track-index="4" data-layout-allow-overlap><span id="toprak-sub-in" class="in" data-var-text="toprakSub">Sıcak bir yemek, düzenli bir oda</span></div></div><div class="slot"><div id="hava-lab" class="clip line lab" data-start="16.40" data-duration="3.20" data-track-index="2" data-layout-allow-overlap><span id="hava-lab-in" class="in" data-var-text="havaLabel">HAVA AY · İKİZLER, TERAZİ, KOVA</span></div><div id="hava-head" class="clip line head" data-start="16.40" data-duration="3.20" data-track-index="3" data-layout-allow-overlap><span id="hava-head-in" class="in" data-var-text="havaHead">Konuşmak</span></div><div id="hava-sub" class="clip line sub" data-start="16.40" data-duration="3.20" data-track-index="4" data-layout-allow-overlap><span id="hava-sub-in" class="in" data-var-text="havaSub">Bir sohbet, yeni bir fikir</span></div></div><div class="slot"><div id="su-lab" class="clip line lab" data-start="20.40" data-duration="3.20" data-track-index="2" data-layout-allow-overlap><span id="su-lab-in" class="in" data-var-text="suLabel">SU AY · YENGEÇ, AKREP, BALIK</span></div><div id="su-head" class="clip line head" data-start="20.40" data-duration="3.20" data-track-index="3" data-layout-allow-overlap><span id="su-head-in" class="in" data-var-text="suHead">Duyguya alan açmak</span></div><div id="su-sub" class="clip line sub" data-start="20.40" data-duration="3.20" data-track-index="4" data-layout-allow-overlap><span id="su-sub-in" class="in" data-var-text="suSub">Sessizlik, müzik, sevdiğin biri</span></div></div>
+
+    <div class="slot">
+      <div id="cta-a" class="clip line hook" data-start="24.50" data-duration="4.50" data-track-index="3" data-layout-allow-overlap style="top:300px"><span id="cta-a-in" class="in" data-var-text="cta1">Senin Ay burcun</span> <span id="cta-b-in" class="in gold" data-var-text="cta2">hangisi?</span></div>
+      <div id="cta-c" class="clip line sub" data-start="25.00" data-duration="4.00" data-track-index="3" data-layout-allow-overlap style="top:404px"><span id="cta-c-in" class="in" data-var-text="cta3">Yorumlara yaz</span></div>
+      <div id="wordmark" class="clip" data-start="25.50" data-duration="3.50" data-track-index="3"><span class="wl" id="wl0">U</span><span class="wl" id="wl1">S</span><span class="wl" id="wl2">T</span><span class="wl" id="wl3">U</span><span class="wl" id="wl4">R</span><span class="wl" id="wl5">L</span><span class="wl" id="wl6">A</span><span class="wl" id="wl7">P</span></div>
+      <div id="handle" class="clip line " data-start="26.30" data-duration="2.70" data-track-index="3" data-layout-allow-overlap><span id="handle-in" class="in" data-var-text="handle">@usturlap.astro</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const C = "540 890";
+      const blurIn = (sel, at, d = 0.18) => tl.fromTo(sel, { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "expo.out" }, at);
+      const blurOut = (sel, at) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, at);
+      const inkIn = (sel, at) => tl.fromTo(sel, { opacity: 0, color: "#8B92A8" }, { opacity: 1, color: "#F2EDE3", duration: 0.3, ease: "power2.out" }, at);
+
+      // ---- hook: frame 0 already reads ----
+      tl.set(["#clock-in", "#hook-a-in"], { opacity: 1 }, 0);
+      blurIn("#hook-b-in", 0.35);
+      blurIn("#hook-c-in", 0.6, 0.22);
+      [["#lw2", 1.2], ["#lw7", 1.9], ["#lw4", 2.6]].forEach(([s, t]) => tl.to(s, { attr: { "fill-opacity": 0.08 }, duration: 0.12, ease: "power2.out" }, t));
+      blurOut(["#clock-in", "#hook-a-in"], 3.0);
+      blurOut(["#hook-b-in", "#hook-c-in"], 3.06);
+
+      // ---- camera push into the moon: one move ----
+      tl.fromTo("#world-svg", { scale: 1 }, { scale: 2.7692, transformOrigin: "540px 890px", duration: 3.6, ease: "power3.inOut" }, 1.2);
+      tl.to("#moon-cres", { opacity: 0, duration: 0.5, ease: "power2.out" }, 4.3);
+      // colour flood: the night sky becomes the room, so the dial lands on the same ground
+      tl.to("#sky", { attr: { fill: "#0B0D12" }, duration: 0.7, ease: "power2.inOut" }, 4.1);
+      tl.to(["#stars", "#city"], { opacity: 0, duration: 0.5, ease: "power2.in" }, 4.1);
+
+      // ---- moon ring becomes the dial ----
+      tl.fromTo("#d-detail", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 4.8);
+      tl.fromTo(".sign", { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.04, ease: "power2.out" }, 4.9);
+      tl.fromTo("#needle", { opacity: 0, rotation: -150, svgOrigin: C }, { opacity: 1, rotation: -150, svgOrigin: C, duration: 0.3 }, 5.0);
+      tl.fromTo("#d-pin", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 5.0);
+      tl.set("#trigon", { rotation: 0, svgOrigin: C }, 0);
+
+      blurIn("#lesson-a-in", 5.15, 0.2);
+      blurIn("#lesson-b-in", 5.3, 0.2);
+      blurOut(["#lesson-a-in", "#lesson-b-in"], 7.55);
+
+      // ---- four elements ----
+      const EL = [['ates', [0, 4, 8]], ['toprak', [1, 5, 9]], ['hava', [2, 6, 10]], ['su', [3, 7, 11]]];
+      EL.forEach(([key, signs], k) => {
+        const t0 = 7.6 + k * 4.0;
+        const rot = k * 150;
+        tl.to("#needle", { rotation: rot, svgOrigin: C, duration: 0.8, ease: "power2.inOut" }, t0);
+        if (k > 0) {
+          tl.to("#trigon", { rotation: rot, svgOrigin: C, duration: 0.8, ease: "power2.inOut" }, t0);
+          const prev = EL[k - 1][1].map((i) => "#sg" + i);
+          tl.to(prev, { attr: { fill: "#8B92A8" }, duration: 0.2, ease: "power2.out" }, t0);
+        } else {
+          tl.to("#trigon", { attr: { "stroke-dashoffset": 0 }, duration: 0.5, ease: "power2.inOut" }, t0 + 0.8);
+        }
+        tl.to(signs.map((i) => "#sg" + i), { attr: { fill: "#E8D3A0" }, duration: 0.25, ease: "power2.out" }, t0 + 0.8);
+        tl.fromTo("#" + key + "-lab-in", { opacity: 0, filter: "blur(4px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out" }, t0 + 0.95);
+        blurIn("#" + key + "-head-in", t0 + 1.1, 0.2);
+        inkIn("#" + key + "-sub-in", t0 + 1.4);
+        blurOut(["#" + key + "-lab-in", "#" + key + "-head-in", "#" + key + "-sub-in"], t0 + 3.75);
+      });
+
+      // ---- pull back into the emblem ----
+      const tEnd = 23.6;
+      tl.to(["#d-detail", "#trigon"], { opacity: 0, duration: 0.3, ease: "power2.in" }, tEnd);
+      tl.to("#dial-svg", { scale: 0.33, y: -130, transformOrigin: "540px 890px", duration: 1.0, ease: "power2.inOut" }, tEnd);
+      tl.to("#needle", { rotation: 771, svgOrigin: C, duration: 1.0, ease: "power2.inOut" }, tEnd);
+      tl.to("#d-cres", { opacity: 1, duration: 0.4, ease: "power2.out" }, tEnd + 0.55);
+      blurIn("#cta-a-in", 24.6, 0.2);
+      blurIn("#cta-b-in", 24.75, 0.22);
+      inkIn("#cta-c-in", 25.1);
+      tl.fromTo(".wl", { opacity: 0.3, filter: "blur(4px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, stagger: 0.1, ease: "power2.out" }, 25.6);
+      inkIn("#handle-in", 26.4);
+
+      window.__timelines["film"] = tl;
+    })();
+  </script>
+</template>
