@@ -1,6 +1,6 @@
 # REVIEW · Usturlap Reels · 16 Kasım
 
-Render: `renders/usturlap-ay-burcu-16kasim.mp4` (1080×1920, 30 fps, 32 s).
+Render: `renders/usturlap-ay-burcu-16kasim-usturlap-sesi.mp4` (1080×1920, 30 fps, 35.3 s).
 
 ## Voiceover (added)
 
@@ -48,3 +48,10 @@ Render: `renders/usturlap-ay-burcu-16kasim.mp4` (1080×1920, 30 fps, 32 s).
 - The dial gets a dark face (#0B0D12), so it reads as an instrument against the navy sky.
 - Each needle stop lights three skyline windows (12 in all), so the bottom of the frame keeps changing; the skyline sits under Instagram's own UI and carries no text.
 - Text sizes: captions 58 px, sub-lines 48 px, labels 34 px.
+
+## Usturlap voice (VoiceStudio, added)
+
+- Voice: VoiceStudio · VoxCPM2 (Apache-2.0) · "Usturlap Anlatıcı (B)", a designed voice (no real person cloned); reference + settings in `../ses-profili/`. Full script generated in one take with the B reference (num_step 24, guidance 2.4), 30.86 s, normalised to -16 LUFS.
+- Word timings: local Whisper (small, tr) aligned to the script by sequence matching (3 non-matching spans spread evenly); every cue comes from `timing.json` values (dial in 5.8 s; needle stops 13.68 / 17.52 / 21.38 / 24.34 s; wordmark 31.89 s; total 35.29 s).
+- Whisper heard "iyi gelebilir" as "ilgelebilir", "birine" as "birini" and "Ay burcun" as "Aybulcu'nun": possibly transcription errors, possibly slurred; needs a human listen.
+- Mix: measured, not heard.
