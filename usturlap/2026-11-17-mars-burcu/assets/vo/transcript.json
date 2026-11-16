@@ -1,0 +1,350 @@
+[
+  {
+    "text": "Bir",
+    "start": 0.04,
+    "end": 0.19,
+    "id": "w0"
+  },
+  {
+    "text": "şey",
+    "start": 0.19,
+    "end": 0.38,
+    "id": "w1"
+  },
+  {
+    "text": "gerçekten",
+    "start": 0.38,
+    "end": 0.97,
+    "id": "w2"
+  },
+  {
+    "text": "istediğinde",
+    "start": 0.97,
+    "end": 1.53,
+    "id": "w3"
+  },
+  {
+    "text": "ilk",
+    "start": 1.79,
+    "end": 1.88,
+    "id": "w4"
+  },
+  {
+    "text": "adımı",
+    "start": 1.95,
+    "end": 2.3,
+    "id": "w5"
+  },
+  {
+    "text": "nasıl",
+    "start": 2.3,
+    "end": 2.67,
+    "id": "w6"
+  },
+  {
+    "text": "atarsın?",
+    "start": 2.67,
+    "end": 3.2,
+    "id": "w7"
+  },
+  {
+    "text": "Cevabın",
+    "start": 3.24,
+    "end": 3.79,
+    "id": "w8"
+  },
+  {
+    "text": "Mars",
+    "start": 3.79,
+    "end": 4.14,
+    "id": "w9"
+  },
+  {
+    "text": "Burcu'nda",
+    "start": 4.14,
+    "end": 4.9,
+    "id": "w10"
+  },
+  {
+    "text": "saklı.",
+    "start": 4.99,
+    "end": 5.42,
+    "id": "w11"
+  },
+  {
+    "text": "Çünkü",
+    "start": 5.47,
+    "end": 5.79,
+    "id": "w12"
+  },
+  {
+    "text": "Mars,",
+    "start": 5.79,
+    "end": 6.24,
+    "id": "w13"
+  },
+  {
+    "text": "harekete",
+    "start": 6.24,
+    "end": 6.75,
+    "id": "w14"
+  },
+  {
+    "text": "geçme",
+    "start": 6.75,
+    "end": 6.96,
+    "id": "w15"
+  },
+  {
+    "text": "biçimini",
+    "start": 7.2,
+    "end": 7.58,
+    "id": "w16"
+  },
+  {
+    "text": "anlatır.",
+    "start": 7.58,
+    "end": 8.3,
+    "id": "w17"
+  },
+  {
+    "text": "Mars'ın",
+    "start": 8.34,
+    "end": 8.8,
+    "id": "w18"
+  },
+  {
+    "text": "bir",
+    "start": 8.8,
+    "end": 9,
+    "id": "w19"
+  },
+  {
+    "text": "ateş",
+    "start": 9.11,
+    "end": 9.29,
+    "id": "w20"
+  },
+  {
+    "text": "burcundaysa",
+    "start": 9.37,
+    "end": 10.16,
+    "id": "w21"
+  },
+  {
+    "text": "düşünmeden",
+    "start": 10.16,
+    "end": 10.98,
+    "id": "w22"
+  },
+  {
+    "text": "başlarsın.",
+    "start": 10.98,
+    "end": 11.76,
+    "id": "w23"
+  },
+  {
+    "text": "İlk",
+    "start": 11.8,
+    "end": 12.02,
+    "id": "w24"
+  },
+  {
+    "text": "kıvılcım",
+    "start": 12.02,
+    "end": 12.7,
+    "id": "w25"
+  },
+  {
+    "text": "yeter.",
+    "start": 12.7,
+    "end": 13.2,
+    "id": "w26"
+  },
+  {
+    "text": "Toprak",
+    "start": 13.24,
+    "end": 13.62,
+    "id": "w27"
+  },
+  {
+    "text": "burcundaysa",
+    "start": 13.62,
+    "end": 14.44,
+    "id": "w28"
+  },
+  {
+    "text": "önce",
+    "start": 14.44,
+    "end": 14.73,
+    "id": "w29"
+  },
+  {
+    "text": "plan",
+    "start": 14.99,
+    "end": 15.06,
+    "id": "w30"
+  },
+  {
+    "text": "yaparsın,",
+    "start": 15.06,
+    "end": 15.81,
+    "id": "w31"
+  },
+  {
+    "text": "sonra",
+    "start": 15.81,
+    "end": 16.1,
+    "id": "w32"
+  },
+  {
+    "text": "bırakmazsın.",
+    "start": 16.1,
+    "end": 16.92,
+    "id": "w33"
+  },
+  {
+    "text": "Hava",
+    "start": 16.96,
+    "end": 17.18,
+    "id": "w34"
+  },
+  {
+    "text": "burcundaysa",
+    "start": 17.18,
+    "end": 17.9,
+    "id": "w35"
+  },
+  {
+    "text": "önce",
+    "start": 17.9,
+    "end": 18.17,
+    "id": "w36"
+  },
+  {
+    "text": "konuşursun.",
+    "start": 18.17,
+    "end": 19.08,
+    "id": "w37"
+  },
+  {
+    "text": "Bir",
+    "start": 19.12,
+    "end": 19.25,
+    "id": "w38"
+  },
+  {
+    "text": "fikir",
+    "start": 19.25,
+    "end": 19.53,
+    "id": "w39"
+  },
+  {
+    "text": "seni",
+    "start": 19.53,
+    "end": 19.76,
+    "id": "w40"
+  },
+  {
+    "text": "harekete",
+    "start": 19.76,
+    "end": 20.21,
+    "id": "w41"
+  },
+  {
+    "text": "geçirir.",
+    "start": 20.21,
+    "end": 20.61,
+    "id": "w42"
+  },
+  {
+    "text": "Su",
+    "start": 20.88,
+    "end": 20.97,
+    "id": "w43"
+  },
+  {
+    "text": "burcundaysa",
+    "start": 20.97,
+    "end": 21.69,
+    "id": "w44"
+  },
+  {
+    "text": "hissederek",
+    "start": 21.69,
+    "end": 22.36,
+    "id": "w45"
+  },
+  {
+    "text": "ilerlersin.",
+    "start": 22.36,
+    "end": 23.24,
+    "id": "w46"
+  },
+  {
+    "text": "Kalbin",
+    "start": 23.32,
+    "end": 23.67,
+    "id": "w47"
+  },
+  {
+    "text": "ikna",
+    "start": 23.69,
+    "end": 23.94,
+    "id": "w48"
+  },
+  {
+    "text": "olunca",
+    "start": 23.94,
+    "end": 24.27,
+    "id": "w49"
+  },
+  {
+    "text": "durmazsın.",
+    "start": 24.35,
+    "end": 25.16,
+    "id": "w50"
+  },
+  {
+    "text": "Peki",
+    "start": 25.2,
+    "end": 25.37,
+    "id": "w51"
+  },
+  {
+    "text": "senin",
+    "start": 25.41,
+    "end": 25.65,
+    "id": "w52"
+  },
+  {
+    "text": "Mars",
+    "start": 25.65,
+    "end": 25.86,
+    "id": "w53"
+  },
+  {
+    "text": "Burcu'nun",
+    "start": 25.97,
+    "end": 26.33,
+    "id": "w54"
+  },
+  {
+    "text": "hangisi?",
+    "start": 26.36,
+    "end": 26.92,
+    "id": "w55"
+  },
+  {
+    "text": "Yorumlara",
+    "start": 26.96,
+    "end": 27.62,
+    "id": "w56"
+  },
+  {
+    "text": "yaz.",
+    "start": 27.73,
+    "end": 27.92,
+    "id": "w57"
+  }
+]
