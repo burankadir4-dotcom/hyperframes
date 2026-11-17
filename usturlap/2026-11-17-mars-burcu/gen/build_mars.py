@@ -174,8 +174,8 @@ html = f'''<template>
     <div id="dial" class="clip" data-start="{D-0.6:.2f}" data-duration="{TOTAL-D+0.6:.2f}" data-track-index="1">{dial}</div>
 
     <div class="slot">
-      {line("hook-a","hook",0,D-0.6,"hook1","Bir şeyi istediğinde",' style="top:330px"')}
-      <div id="hook-b" class="clip line hook" data-start="0" data-duration="{D-0.6:.2f}" data-track-index="3" data-layout-allow-overlap style="top:416px"><span id="hook-b-in" class="in" data-var-text="hook2">ilk adımı</span> <span id="hook-c-in" class="in gold" data-var-text="hook3">nasıl atarsın?</span></div>
+      {line("hook-a","hook",0,D-0.2,"hook1","Bir şeyi istediğinde",' style="top:330px"')}
+      <div id="hook-b" class="clip line hook" data-start="0" data-duration="{D-0.2:.2f}" data-track-index="3" data-layout-allow-overlap style="top:416px"><span id="hook-b-in" class="in" data-var-text="hook2">ilk adımı</span> <span id="hook-c-in" class="in gold" data-var-text="hook3">nasıl atarsın?</span></div>
     </div>
 
     <div class="slot">
@@ -208,8 +208,8 @@ html = f'''<template>
       tl.set("#flame", {{ scale: 0, svgOrigin: "{CX} 830" }}, 0);
       tl.fromTo("#match", {{ y: 34 }}, {{ y: 0, duration: 0.16, ease: "power4.out" }}, STRIKE);
       tl.to("#flame", {{ scale: 1, svgOrigin: "{CX} 830", duration: 0.4, ease: "expo.out" }}, STRIKE + 0.04);
-      blurOut("#hook-a-in", {D-0.9:.2f});
-      blurOut(["#hook-b-in", "#hook-c-in"], {D-0.84:.2f});
+      blurOut("#hook-a-in", {D-0.5:.2f});
+      blurOut(["#hook-b-in", "#hook-c-in"], {D-0.44:.2f});
 
       // ---- the flame stretches into the needle; the dial draws itself around it ----
       tl.to("#flame", {{ scaleY: 1.9, scaleX: 0.12, svgOrigin: "{CX} 830", duration: 0.5, ease: "power3.in" }}, {D-0.6:.2f});
